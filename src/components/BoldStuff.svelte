@@ -1,5 +1,6 @@
-<script>
-    export let text
+<script lang="ts">
+    import type { OtherStuff } from "./OtherStuff";
+    export let other: OtherStuff;
 </script>
 
-<b>{text}</b>
+<b>{other.text}</b>

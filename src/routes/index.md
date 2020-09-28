@@ -4,4 +4,4 @@
 
 Index page.
 
-<BoldStuff text="It worked!" />
+<BoldStuff other={{ text: "It worked!" }} />
