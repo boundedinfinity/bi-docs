@@ -9,6 +9,7 @@ import typescript from '@rollup/plugin-typescript';
 import config from 'sapper/config/rollup.js';
 import pkg from './package.json';
 import { mdsvex } from "mdsvex";
+import yaml from '@rollup/plugin-yaml'
 
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
@@ -70,7 +71,8 @@ export default {
 
             !dev && terser({
                 module: true
-            })
+            }),
+            yaml(),
         ],
 
         preserveEntrySignatures: false,
@@ -100,7 +102,8 @@ export default {
                 dedupe: ['svelte']
             }),
             commonjs(),
-            typescript({ sourceMap: dev })
+            typescript({ sourceMap: dev }),
+            yaml(),
         ],
         external: Object.keys(pkg.dependencies).concat(require('module').builtinModules),
 
