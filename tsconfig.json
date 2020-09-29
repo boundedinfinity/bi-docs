@@ -9,4 +9,9 @@
         "__sapper__/*",
         "public/*"
     ],
+    "compilerOptions": {
+        "types": [
+            "node"
+        ]
+    }
 }
