@@ -1,7 +1,4 @@
-<script>
-    import BoldStuff from '../components/BoldStuff.svelte'
-</script>
+Index
 
-Index page.
-
-<BoldStuff other={{ text: "It worked!" }} />
+- [/blog/2020/09/28/placeholder](/blog/2020/09/28/placeholder)
+- [/projects/blog](/projects/blog)
