@@ -8,12 +8,9 @@
     let first: Navigation[] = [];
 
     $: {
-        console.log(`$page.path: ${$page.path}`)
         const bcs = NavStore.breadcrumbs($page.path);
 
         if (bcs) {
-            console.log(`bcs.length: ${bcs.length}`)
-
             last = bcs[bcs.length - 1];
             first = bcs.slice(0, bcs.length - 1);
 
