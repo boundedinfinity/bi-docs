@@ -1,3 +1,6 @@
+export type WalkFn = (Navigation) => void
+export type FindFn = (Navigation) => boolean
+
 export interface Config {
     global: Global
     navigation: Navigation
@@ -12,6 +15,6 @@ export interface Navigation {
     path: string
     segment: string
     parent: Navigation
-    children: Navigation
+    children: Navigation[]
     expanded: boolean
 }

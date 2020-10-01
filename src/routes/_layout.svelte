@@ -1,4 +1,5 @@
 <script lang="ts">
+    import Trace from "../components/util/Trace.svelte"
     import Header from "../components/layout/Header.svelte";
     import Nav from "../components/layout/Nav.svelte";
     import Aside from "../components/layout/Aside.svelte";
@@ -10,6 +11,7 @@
         --grid-sides: 10rem;
         --grid-header: 5rem;
         --grid-footer: 5rem;
+        --grid-main: minmax(auto, 50rem);
 
         --debug-border-header: solid red 1px;
         --debug-border-nav: solid red 1px;
@@ -23,7 +25,7 @@
         width: 100vw;
         box-sizing: border-box;
         display: grid;
-        grid-template-columns: var(--grid-sides) auto var(--grid-sides);
+        grid-template-columns: var(--grid-sides) var(--grid-main) var(--grid-sides);
         grid-template-rows: var(--grid-header) auto var(--grid-footer);
         grid-template-areas:
             "header header  header"
@@ -74,3 +76,5 @@
         <Footer />
     </footer>
 </div>
+
+<Trace />
