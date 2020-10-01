@@ -8,10 +8,10 @@
 
 <style>
     :root {
-        --grid-sides: 10rem;
+        --grid-sides: minmax(5rem, auto);
         --grid-header: 5rem;
         --grid-footer: 5rem;
-        --grid-main: minmax(auto, 50rem);
+        --grid-main: minmax(30rem, auto);
 
         --debug-border-header: solid red 1px;
         --debug-border-nav: solid red 1px;
