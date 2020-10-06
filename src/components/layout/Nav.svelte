@@ -1,10 +1,13 @@
 <script lang="ts">
-    import { stores } from "@sapper/app";
     import NavStore from "../../config/store";
     import NavItem from "./NavItem.svelte";
-
-    const { page } = stores();
 </script>
+
+<style>
+    ul {
+        padding-left: 0.7rem;
+    }
+</style>
 
 <ul>
     {#each $NavStore.children as navigation}

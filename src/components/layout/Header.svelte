@@ -18,6 +18,9 @@
                 last = NavStore.root();
             }
         }
+
+        NavStore.expandDown("/", false, true);
+        NavStore.expandUp($page.path, true, true);
     }
 </script>
 

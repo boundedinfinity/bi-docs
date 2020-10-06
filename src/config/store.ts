@@ -8,19 +8,28 @@ function create() {
     return {
         subscribe,
         set,
-        collapseAll: () => update((navigation: Navigation) => {
-            WalkDown(navigation, SetExpanded(false))
-            return navigation
-        }),
-        expandAll: () => update((navigation: Navigation) => {
-            WalkDown(navigation, SetExpanded(true))
-            return navigation
-        }),
-        expandUp: (path: string) => update((navigation: Navigation) => {
+        expandUp: (path: string, expanded: boolean, recurse: boolean) => update((navigation: Navigation) => {
             const found = Find(navigation, ByPath(path))
 
             if (found) {
-                WalkUp(found, SetExpanded(true))
+                if (recurse) {
+                    WalkUp(found, SetExpanded(expanded))
+                } else {
+                    found.expanded = expanded
+                }
+            }
+
+            return navigation
+        }),
+        expandDown: (path: string, expanded: boolean, recurse: boolean) => update((navigation: Navigation) => {
+            const found = Find(navigation, ByPath(path))
+
+            if (found) {
+                if (recurse) {
+                    WalkDown(found, SetExpanded(expanded))
+                } else {
+                    found.expanded = expanded
+                }
             }
 
             return navigation

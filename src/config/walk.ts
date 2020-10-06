@@ -4,7 +4,7 @@ import type { Navigation, WalkFn, FindFn } from './model'
 export function Breadcrumbs(navigation: Navigation, path: string): Navigation[] {
     const navigations: Navigation[] = []
     const found = Find(navigation, ByPath(path))
-    console.log(found)
+    // console.log(found)
 
     if (found) {
         WalkUp(found, (current: Navigation) => {
