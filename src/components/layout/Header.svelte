@@ -25,9 +25,32 @@
 </script>
 
 <style>
+    ul {
+        padding: 0;
+        list-style: "/";
+        display: flex;
+        font-size: 1.4rem;
+    }
+
     li {
-        display: inline;
-        padding: 0 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    li:first-child {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        color: inherit;
+    }
+
+    a:hover,
+    a:focus {
+        filter: brightness(50%);
     }
 </style>
 

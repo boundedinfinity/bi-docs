@@ -52,6 +52,16 @@
     .icon-expanded {
         width: 0.75rem;
     }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    a:hover,
+    a:focus {
+        filter: brightness(50%);
+    }
 </style>
 
 <li>
